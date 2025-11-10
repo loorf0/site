@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informações sobre relações étnico-raciais, diversidade, combate ao racismo e marcos legais da educação no Brasil.">
+    <title>Relações Étnico-Raciais e Diversidade - Valorização</title>
+    <link rel="stylesheet" href="raciais.css"> 
+</head>
+<body>
+    
+    <header>
+        <h1>Relações Étnico-Raciais e Diversidade</h1>
+        <a href="inicial.html">Página inicial</a> 
+    </header>
+ 
+    <main>
+        
+        <section class="introducao">
+            <h2>Importância da Diversidade</h2>
+            
+            <p>As relações étnico-raciais são fundamentais para a construção de uma sociedade justa e igualitária. A diversidade étnica e racial é uma riqueza cultural do Brasil, e a igualdade racial é um princípio fundamental da Constituição Brasileira.</p>
+            
+            <p>A luta contra o racismo e a discriminação racial é uma responsabilidade de todos. A educação é fundamental para promover a igualdade racial e a conscientização sobre a história e a cultura afro-brasileira. A valorização da diversidade cultural é importante para a coesão social.</p>
+            
+            <p>As políticas de ação afirmativa buscam reduzir as desigualdades raciais e promover a inclusão de grupos historicamente excluídos. É importante trabalhar juntos para construir uma sociedade mais justa e igualitária para todos, independentemente da raça ou etnia. Isso inclui promover a igualdade racial e a inclusão em todos os setores da sociedade, combater o racismo e a discriminação racial, e implementar políticas que promovam a igualdade e a inclusão. Juntos, podemos construir uma sociedade melhor.</p>
+        </section>
+
+        
+        <section class="marcos-legais">
+            <h2>Marcos Legais da Educação para as Relações Étnico-Raciais</h2>
+            
+            <p>Existem documentos oficiais que substanciam a educação integrativa e antirracista no Brasil e no Ceará, regulamentando, oficialmente, a implementação das políticas públicas educacionais pluralizadas e inclusivas. Esses dispositivos devem orientar a prática de ensino, possibilitando uma educação crítica e dialética, de modo a oferecer condições de formação para ressignificar e aprimorar práticas pedagógicas e profissionais.</p>
+
+            <ul class="lista-leis">
+                <li>Lei nº 10.639, de 9 de janeiro de 2003: Ensino de História e Cultura Afro-Brasileira e Africana.</li>
+                <li>O direito à saúde da população negra será garantido pelo poder público mediante políticas universais, sociais e econômicas destinadas à redução do risco de doenças e de outros agravos.</li>
+                <li>A população negra tem direito a participar de atividades educacionais, culturais, esportivas e de lazer adequadas a seus interesses e condições, de modo a contribuir para o patrimônio cultural de sua comunidade e da sociedade brasileira.</li>
+                <li>apoio à iniciativa de entidades que mantenham espaço para promoção social e cultural da população negra.</li>
+                <li>desenvolvimento de campanhas educativas, inclusive nas escolas, para que a solidariedade aos membros da população negra faça parte da cultura de toda a sociedade.</li>
+                <li>Plano Nacional de Implementação das Diretrizes Curriculares Nacionais: para a Educação das Relações Étnico-Raciais e para o Ensino de História e Cultura Afro-Brasileira e Africana.</li>
+                <li>O direito à liberdade de consciência e de crença e ao livre exercício dos cultos religiosos de matriz africana compreende.</li>
+                <li>Resolução CEE nº 416/2006: Ensino de história e cultura afro-brasileira e africana.</li>
+            </ul>
+        </section>
+        
+        <section class="quiz">
+            <h2>Teste Seu Conhecimento!</h2>
+            <p>Responda a estas três perguntas rápidas para ver o quanto você sabe sobre a legislação e a importância da diversidade.</p>
+            
+            <div id="quiz-container">
+                </div>
+
+            <button id="submit-quiz" style="padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">
+                Finalizar e Ver Resultado
+            </button>
+            
+            <div id="resultado-quiz" style="margin-top: 20px; font-weight: bold;"></div>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Trio Paradadura. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        const perguntasDoQuiz = [
+            {
+                pergunta: "Qual lei federal tornou obrigatório o ensino de História e Cultura Afro-Brasileira e Africana nas escolas brasileiras?",
+                opcoes: ["Lei nº 9.394/96 (LDB)", "Lei nº 10.639/03", "Estatuto da Criança e do Adolescente", "Lei Áurea"],
+                respostaCorreta: "Lei nº 10.639/03"
+            },
+            {
+                pergunta: "O que o conceito de 'Racismo Estrutural' aborda?",
+                opcoes: [
+                    "Atos de preconceito de um indivíduo para com o outro.",
+                    "Ações afirmativas criadas pelo governo.",
+                    "Mecanismos sociais, políticos e econômicos que perpetuam a desigualdade racial.",
+                    "A discriminação por motivos religiosos.",
+                ],
+                respostaCorreta: "Mecanismos sociais, políticos e econômicos que perpetuam a desigualdade racial."
+            },
+            {
+                pergunta: "Qual é a principal função das políticas de Ação Afirmativa no Brasil?",
+                opcoes: [
+                    "Promover a segregação racial em universidades.",
+                    "Garantir a supremacia de um grupo étnico sobre outros.",
+                    "Corrigir desigualdades históricas e promover a inclusão de grupos sub-representados.",
+                    "Fornecer auxílio financeiro apenas para o estudo da história africana.",
+                ],
+                respostaCorreta: "Corrigir desigualdades históricas e promover a inclusão de grupos sub-representados."
+            }
+        ];
+
+        function carregarQuiz() {
+            const quizContainer = document.getElementById('quiz-container');
+            let output = '';
+
+            perguntasDoQuiz.forEach((perguntaAtual, index) => {
+                const opcoes = [];
+                
+                for (let i = 0; i < perguntaAtual.opcoes.length; i++) {
+                    opcoes.push(
+                        `<label style="display: block; margin-bottom: 8px;">
+                            <input type="radio" name="pergunta${index}" value="${perguntaAtual.opcoes[i]}">
+                            ${perguntaAtual.opcoes[i]}
+                        </label>`
+                    );
+                }
+
+                output += `
+                    <div class="pergunta-quiz" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px;">
+                        <p><strong>${index + 1}. ${perguntaAtual.pergunta}</strong></p>
+                        <div class="opcoes-quiz">${opcoes.join('')}</div>
+                    </div>
+                `;
+            });
+
+            quizContainer.innerHTML = output;
+        }
+
+        function verificarResultados() {
+            const quizContainer = document.getElementById('quiz-container');
+            const resultadoContainer = document.getElementById('resultado-quiz');
+            let pontuacao = 0;
+
+            perguntasDoQuiz.forEach((perguntaAtual, index) => {
+                const selector = `input[name=pergunta${index}]:checked`;
+                const respostaSelecionada = (quizContainer.querySelector(selector) || {}).value;
+
+                const elementoPergunta = quizContainer.querySelector(`.pergunta-quiz:nth-child(${index + 1})`);
+                
+                if (respostaSelecionada === perguntaAtual.respostaCorreta) {
+                    pontuacao++;
+                    elementoPergunta.style.backgroundColor = '#d4edda';
+                } else {
+                    elementoPergunta.style.backgroundColor = '#f8d7da';
+                    const labelCorreta = quizContainer.querySelector(`input[name=pergunta${index}][value='${perguntaAtual.respostaCorreta}']`).parentNode;
+                    labelCorreta.style.fontWeight = 'bold';
+                    labelCorreta.style.color = '#155724';
+                }
+            });
+
+            let feedback = '';
+            
+            if (pontuacao === perguntasDoQuiz.length) {
+                feedback = 'Uau! 🏆 Conhecimento nota 10! Seu letramento racial está afiadíssimo.';
+            } else if (pontuacao > perguntasDoQuiz.length / 2) {
+                feedback = 'Muito bem! 🎉 Você acertou a maioria. Continue estudando e explorando o tema!';
+            } else {
+                feedback = 'Não desanime! 😉 A luta por igualdade é contínua, e o aprendizado também. Explore mais o conteúdo da página.';
+            }
+
+            resultadoContainer.innerHTML = `Você acertou **${pontuacao}** de **${perguntasDoQuiz.length}** perguntas. <br>${feedback}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', carregarQuiz);
+
+        document.getElementById('submit-quiz').addEventListener('click', verificarResultados);
+    </script>
+</body>
+</html>
